@@ -1,0 +1,51 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-chkbox .ui-chkbox-box {
+  width: 18px;
+  height: 18px;
+  border-radius: $border-radius-xs;
+  border: $border-width-hairline $color-neutral-medium solid;
+
+  .box-item {
+    padding: 8px;
+  }
+}
+
+.ui-chkbox .ui-chkbox-icon {
+  display: block;
+  height: 100%;
+  padding: 0.1rem 0;
+}
+
+.ui-chkbox-label {
+  color: $color-neutral-darkest;
+  padding-left: $spacing-inline-xxxs;
+}
+
+.ui-chkbox-box.ui-state-active, .ui-chkbox-box.ui-state-active:hover,
+.ui-radiobutton-box.ui-state-active, .ui-radiobutton-box.ui-state-active:hover {
+  border: $border-width-hairline $color-brand-primary-medium solid;
+  background: $color-brand-primary-medium;
+  color: $color-neutral-lightest;
+}
+
+.ui-chkbox-label {
+  vertical-align: middle;
+  color: $piramideMenupaineldefaultColor;
+  word-break: break-all;
+  line-height: 2rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ui-chkbox {
+  margin-right: 0;
+}
+
+.ui-chkbox.ui-widget {
+  // top: 0.6rem;
+  margin-right: $spacing-inline-xxxs;
+}

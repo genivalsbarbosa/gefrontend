@@ -1,0 +1,110 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+//  campos obrigatorios
+.texto-campos-obrigatorios {
+  display: contents;
+  position: inherit;
+  padding-top: 10px;
+
+  p {
+    float: right !important;
+    color: #ff0000;
+    margin: 0px 20px 5px 0;
+  }
+  @media screen and (max-width: 992px) {
+    padding-top: 120px;
+  }
+}
+
+.ui-sidebar-procenge {
+  background-color: white;
+  width: 65%;
+
+  @media screen and (min-width: 768px) {
+    width: 65%;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 80%;
+  }
+
+  /*
+  @media screen and (max-width: 1440px) and (min-width: 576px) {
+    width: 50%;
+  }
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+  */
+
+  overflow: hidden;
+}
+
+// Sidebar
+.ui-sidebarinterno-procenge {
+  background-color: white;
+  width: 100%;
+}
+
+.ui-sidebar-procenge {
+  overflow-y: auto;
+}
+
+// icones do navigation do sidebar
+.navButtonDisabled {
+  color: #03326145;
+}
+
+.navButtonEnable {
+  color: #033261;
+  cursor: pointer;
+}
+
+.sidebarIconeFecharPersonalizado {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: -50px;
+  right: 0;
+  cursor: pointer;
+  float: right;
+}
+
+.tituloSidebar {
+  color: #4c4c4c;
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  z-index: -1;
+}
+
+.ui-sidebar-left.ui-sidebar-active, .ui-sidebar-right.ui-sidebar-active {
+  background: #fff;
+}
+
+.ui-sidebar-procenge {
+  .col-lg-6 {
+    .iconefavoritocampofiltro,
+    .iconeocultarcampofiltro {
+      width: 13% !important;
+
+      @media screen and (max-width: 1440px) {
+        width: 18.5% !important;
+      }
+    }
+
+    &.comp-favorito {
+      .box-checkbox,
+      .box-range {
+        width: 87% !important;
+
+        @media screen and (max-width: 1440px) {
+          width: 80% !important;
+        }
+      }
+    }
+  }
+}

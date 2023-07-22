@@ -1,0 +1,91 @@
+<div class="form-group">
+    <div class="blockinicial" *ngIf="carregando">
+        <div class="loaderinicial" *ngIf="carregando"></div>
+    </div>
+    <label for="exampleFormControlInput1" class="form-label">{{nome}}:</label>
+    <p-dropdown 
+        class="medi-dropdown" 
+        [options]="listaitem" 
+        [(ngModel)]="item"
+        (onChange)="onChangee()"
+        (onClear)="onChangee()"
+        (onFocus)="focuss()"
+        optionLabel="nome"
+        optionValue="codigo"
+        [filter]="true" 
+        filterBy="nome" 
+        [showClear]="true" 
+        placeholder="Selecione um registro" 
+        emptyMessage="Nenhum registro encontrado" 
+        emptyFilterMessage="Nenhum registro encontrado"
+        >
+
+        <ng-template pTemplate="item">
+            <div class="flex align-items-center gap-2" *ngIf="itemObjeto">
+                <div>{{ itemObjeto.nome }}</div>
+            </div>
+        </ng-template>
+
+        <ng-template let-item pTemplate="item">
+            <div class="flex align-items-center gap-2">
+                <div>{{ item.nome }}</div>
+            </div>
+        </ng-template>
+
+    </p-dropdown>
+</div>
+
+<!--
+<div [ngClass]="{'box-range': estiloFavorito}">
+    <div [ngClass]="{'col-range': estiloFavorito, 'col-range-full': estiloFavorito}">
+        <div class="form-group">
+            <div [ngClass]="{ 'campoInformativoBorda':(desabilitar == true) }">
+                <div class="ui-textbox-label" [ngClass]="{'com-icone': mostrarBotaoHistorico}">
+
+                    <div class="box-label" *ngIf="nome!=''">
+                        <label (click)="cliqueLabel()">
+                            <span *ngIf="obrigatorio">* </span>{{ nome }}:
+                        </label>
+                    </div>
+
+                    <div class="blockinicial" *ngIf="carregandoinicializacao">
+                        <div class="loaderinicial" *ngIf="carregandoinicializacao"></div>
+                    </div>
+
+                    <p-dropdown
+                        [pTooltip]="valorInicial == null ? '' : valorInicial.nome"
+                        tooltipZIndex="99999999"
+                        [autoWidth]="false"
+                        [style]="{'width':'100%'}"
+                        [options]="opcao"
+                        [(placeholder)]="textoPlaceHolder"
+                        class="form-control"
+                        [ngClass]="{ campoobrigatorioativo: (mensagem!=''), disabled: desabilitar }"
+                        optionLabel="nome"
+                        [(ngModel)]="valorInicial"
+                        filter="true"
+                        filterBy="label,value.name"
+                        filterPlaceholder="Pesquisar..."
+                        dropdownIcon='fa fa-fw fa-angle-down'
+                        [showClear]="showClear"
+                        (onChange)="enviarValor(receber.value)"
+                        (onFocus)="onFocus($event)"
+                        (onBlur)="onBlur($event)"
+                        [(disabled)]="desabilitar"
+                        emptyFilterMessage="Nenhum registro encontrado"
+                        #receber>
+                    </p-dropdown>
+
+                    <procenge-mensagemcampo [mensagem]="mensagem"> </procenge-mensagemcampo>
+
+                </div>
+
+                <a class="icone-historico" (click)="onClick()" *ngIf="mostrarBotaoHistorico">
+                    <img src="/assets/imagens/geral/icone-historico.svg" border="0" />
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+-->

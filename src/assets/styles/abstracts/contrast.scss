@@ -1,0 +1,217 @@
+// ------------------- Alto contraste ---------------------- //
+
+.contrast,
+.contrast nav,
+.contrast div,
+.contrast li,
+.contrast ol,
+.contrast header,
+.contrast footer,
+.contrast section,
+.contrast main,
+.contrast aside,
+.contrast article {
+  background-color: black !important;
+  color: white !important;
+
+  .toggle-button-text-on, .toggle-button-text-off {
+    background: yellow !important;
+  }
+  .toggle-button-switch {
+    background: black !important;
+  }
+
+  #toggle {
+    .navbar-toggle {
+      border: none !important;
+    }
+  }
+}
+
+.contrast .ui-chkbox .ui-chkbox-icon:hover  {
+  background: yellow !important;
+  color: black !important;
+}
+
+.contrast .ui-datatable .ui-datatable-data > tr > td {
+  background: black;
+}
+
+.contrast .box-label > a:hover {
+  background: yellow !important;
+  color: black !important;
+}
+
+.contrast .ct-close > a > span,
+.contrast .ct-close > a > span > i,
+.contrast .ct-close > a > i {
+  color: yellow !important;
+}
+
+.contrast h1,
+.contrast h2,
+.contrast h3,
+.contrast h4,
+.contrast h5,
+.contrast h6,
+.contrast p,
+.contrast label,
+.contrast strong,
+.contrast em,
+.contrast cite,
+.contrast q,
+.contrast i,
+.contrast b,
+.contrast u,
+.contrast span {
+  color: white !important;
+}
+
+.contrast span.ui-multiselect-trigger-icon {
+  background: transparent !important;
+  // border-right: 4px solid white !important;
+  &:hover {
+    color: yellow !important;
+  }
+}
+
+.contrast span.fa-times-styles {
+  &:hover {
+    background: transparent !important;
+    color: yellow !important;
+  }
+}
+
+.contrast p {
+  background-color: black !important;
+}
+
+.contrast a{
+  color: yellow !important;
+  background-color: transparent !important;
+}
+
+.contrast .accordion-header .span {
+  background-color: transparent !important;
+}
+
+.contrast .ui-dropdown .ui-dropdown-trigger > .fa,
+.contrast .ui-dropdown .ui-dropdown-clear-icon {
+  background-color: transparent !important;
+  &:hover {
+    color:yellow !important;
+  }
+}
+
+.contrast .form-control {
+  padding-left: 4px;
+  padding-right: 4px;
+  background: black !important;
+  color: white !important;
+  &:disabled {
+      color: #555 !important;
+      background-color: #555 !important;
+    }
+}
+
+.contrast .submenu tr:hover {
+  background-color: $color-brand-primary-dark !important;
+}
+
+.contrast button,
+.contrast.btn-primary,
+.contrast.btn-secondary,
+.contrast input[type=button],
+.contrast input[type=reset],
+.contrast input[type=submit] {
+  background: black !important;
+  color: yellow !important;
+  border: 1px yellow solid !important;
+
+  span {
+    color: yellow !important;
+  }
+}
+
+.contrast button.btn-primary > span,
+.contrast button.btn-secondary > span,
+.contrast p.morefields {
+  color: yellow !important;
+}
+
+.contrast span.headerMoreFields::after {
+  background: yellow !important;
+}
+
+.contrast input[type=text],
+.contrast input[type=password],
+.contrast input[type=url],
+.contrast input[type=search],
+.contrast input[type=email],
+.contrast input[type=tel],
+.contrast input[type=date],
+.contrast input[type=month],
+.contrast input[type=week],
+.contrast input[type=datetime],
+.contrast input[type=datetime-local],
+.contrast textarea,
+.contrast input[type=number] {
+  background: black !important;
+  border: 1px solid white !important;
+  color: white !important;
+}
+
+.contrast th.ui-datatable th.ui-sortable-column:not(.ui-state-active) {
+  background: black !important;
+}
+
+.contrast .form-control:disabled {
+  color: yellow !important;
+}
+
+.contrast .table-edit .tr .td .ui-inputtext[disabled] {
+  background: black !important;
+}
+
+// .contrast .table-edit .td input, .table-edit .td textarea {
+//   background: black !important;
+//   color: white !important;
+// }
+
+.contrast .ui-datepicker.ui-widget .ui-datepicker-title select {
+  color: yellow !important;
+  background: black !important;
+}
+
+.contrast .ui-datepicker.ui-widget .ui-datepicker-calendar thead th {
+  background-color: #666 !important;
+}
+
+.contrast .ui-datepicker td>span,
+.contrast .ui-datepicker td>a {
+  background: black !important;
+}
+
+.contrast .ui-table .ui-table-tbody > tr > td {
+  background: black !important;
+  color: white !important;
+}
+
+.contrast .ui-datatable tbody tr.ui-widget-content {
+  background-color: black !important;
+}
+
+.contrast .ui-datatable tbody tr.ui-widget-content.ui-datatable-odd {
+  background-color: black !important;
+}
+
+.contrast .ui-dropdown label.ui-dropdown-label {
+  background: transparent !important;
+  color: yellow !important;
+}
+
+.contrast .fa-times-styles {
+  background: transparent !important;
+}
+
+// ------------------- Fim - Alto contraste ---------------------- //

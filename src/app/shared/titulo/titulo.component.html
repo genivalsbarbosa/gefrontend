@@ -1,0 +1,31 @@
+<h2 class="card-title">{{titulo}}</h2>
+<h5 class="card-subtitle mb-2 text-body-secondary">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+
+            <li *ngFor="let item of migalhas; index as i; last as isLast"
+                [ngClass]="{'breadcrumb-item': true, 'active': isLast}" >
+                <!--
+                <a href="#">{{item.nome}}{{isLast}}</a>
+                -->
+
+                <a *ngIf="!isLast" 
+                    [routerLink]="item.url"
+                    routerLinkActive="active-page"
+                    ariaCurrentWhenActive="page">
+                    {{item.nome}}
+                </a>
+
+                <a *ngIf="isLast">
+                    {{item.nome}}
+                </a>
+
+            </li>
+
+            <!--
+            <li class="breadcrumb-item"><a href="#">Procedimento</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#">Consulta</a></li>
+            -->
+        </ol>
+    </nav>
+</h5>

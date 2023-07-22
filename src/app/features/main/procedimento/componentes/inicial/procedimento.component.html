@@ -1,0 +1,176 @@
+<ge-titulo titulo="Procedimento" [migalhas]="[{'nome': 'Consulta', 'url': 'procedimento'}]"></ge-titulo>
+<!--
+<h2 class="card-title">Procedimento</h2>
+<h5 class="card-subtitle mb-2 text-body-secondary">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Procedimento</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="#">Consulta</a></li>
+        </ol>
+    </nav>
+</h5>
+-->
+
+<ge-accordion titulo="Filtros">
+
+    <div class="row">
+
+        <div class="col-lg-4 col-xm-12" style="padding-bottom: 10px;">
+            <label for="exampleFormControlInput1" class="form-label">Data Procedimento:</label>
+            <p-calendar class="medi-calendar" [(ngModel)]="procedimentoFiltro.dataProcedimento" dateFormat="dd/mm/yy" [showIcon]="true"></p-calendar>
+        </div>
+
+        <div class="col-lg-4 col-xm-12" style="padding-bottom: 10px;">
+            <ge-dropdown
+                identificador="empresa"
+                nome="Empresa"
+                (focus)="carregarEmpresa()"
+                [listaitem]="listaEmpresaItem"
+                [(item)]="procedimentoFiltro.empresa.id"
+                [carregando]="carregandoEmpresa">
+            </ge-dropdown>
+
+        </div>
+
+        <div class="col-lg-4 col-xm-12" style="padding-bottom: 10px;">
+
+            <ge-dropdown
+                identificador="anestesista"
+                nome="Anestesista"
+                (focus)="carregarUsuario()"
+                [listaitem]="listaUsuarioItem"
+                [(item)]="procedimentoFiltro.anestesista.id"
+                [carregando]="carregandoUsuario">
+            </ge-dropdown>
+
+        </div>
+
+        <div class="col-lg-4 col-xm-12" style="padding-bottom: 10px;">
+
+            <ge-dropdown
+                identificador="cirurgiao"
+                nome="Cirurgião"
+                (focus)="carregarUsuario()"
+                [listaitem]="listaUsuarioItem"
+                [(item)]="procedimentoFiltro.cirurgiao.id"
+                [carregando]="carregandoUsuario">
+            </ge-dropdown>
+
+        </div>
+
+        <div class="col-lg-4 col-xm-12" style="padding-bottom: 10px;">
+
+            <ge-dropdown
+                identificador="primeiroauxiliar"
+                nome="Primeiro Auxiliar"
+                (focus)="carregarUsuario()"
+                [listaitem]="listaUsuarioItem"
+                [(item)]="procedimentoFiltro.primeiroAuxiliar.id"
+                [carregando]="carregandoUsuario">
+            </ge-dropdown>
+
+        </div>
+
+        <div class="col-lg-4 col-xm-12" style="padding-bottom: 10px;">
+
+            <ge-dropdown
+                identificador="segundoauxiliar"
+                nome="Segundo Auxiliar"
+                (focus)="carregarUsuario()"
+                [listaitem]="listaUsuarioItem"
+                [(item)]="procedimentoFiltro.segundoAuxiliar.id"
+                [carregando]="carregandoUsuario">
+            </ge-dropdown>
+
+        </div>
+        
+    </div>
+</ge-accordion>
+
+<div class="row">
+    <div class="col-lg-12" style="padding-bottom: 10px;">
+        <button
+            class="btn btn-primary"
+            type="button"
+            (click)="pesquisar()" > 
+            Pesquisar 
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-12" style="padding-bottom: 10px;">
+
+        <p-table 
+            [value]="listaProcedimento" 
+            [tableStyle]="{'min-width': '50rem'}"
+            [paginator]="true"
+            [rows]="10"
+            [showCurrentPageReport]="true"
+            currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} entradas"
+            [rowsPerPageOptions]="[10, 25, 50]"
+            >
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th>Data</th>
+                    <th>Empresa</th>
+                    <th>Competência</th>
+                    <th>Anestesista</th>
+                    <th>Valor Anest.</th>
+                    <th>Cirurgião</th>
+                    <th>Valor Cirurg.</th>
+                    <th>Primeiro Auxiliar</th>
+                    <th>Valor Prim.</th>
+                    <th>Segundo Auxiliar</th>
+                    <th>Valor Seg.</th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-procedimento let-columns="columns">
+                <tr>
+                    <td>{{procedimento.dataProcedimento | date:'dd/MM/YYYY'}}</td>
+                    <td>{{procedimento.empresa}}</td>
+                    <td>{{procedimento.competencia}}</td>
+                    <td>{{procedimento.anestesista}}</td>
+                    <td>{{procedimento.valorAnestesista | currency:'BRL'}}</td>
+                    <td>{{procedimento.cirurgiao}}</td>
+                    <td>{{procedimento.valorCirurgiao | currency:'BRL'}}</td>
+                    <td>{{procedimento.primeiroAuxiliar}}</td>
+                    <td>{{procedimento.valorPrimeiroAuxiliar | currency:'BRL'}}</td>
+                    <td>{{procedimento.segundoAuxiliar}}</td>
+                    <td>{{procedimento.valorSegundoAuxiliar | currency:'BRL'}}</td>
+                    <!--
+                    <td>{{product.price | currency:'USD'}}</td>
+                    -->
+                </tr>
+            </ng-template>
+        </p-table>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <button
+            class="btn btn-primary"
+            style="margin-right: 8px;"
+            type="button"
+            (click)="incluir()" > 
+            Incluir 
+        </button>
+        <button
+            class="btn btn-primary"
+            style="margin-right: 8px;"
+            type="button"
+            (click)="incluir()" > 
+            Alterar 
+        </button>
+        <button
+            class="btn btn-primary"
+            type="button"
+            (click)="incluir()" > 
+            Excluir 
+        </button>
+    </div>
+</div>
+
+

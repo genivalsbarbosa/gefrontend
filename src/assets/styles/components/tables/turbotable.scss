@@ -1,0 +1,38 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-table {
+  .ui-table-thead > tr > th,
+  .ui-table-tfoot > tr > td {
+    background: #ebedf0;
+    border: transparent;
+    border-width: 0px;
+  }
+
+  .ui-sortable-column:not(.ui-state-highlight):hover {
+    background: transparent;
+    border: transparent;
+    color: $piramideMenupaineldefaultColor;
+  }
+
+  .ui-table-tbody > tr:nth-child(even) {
+    background-color: #fafafb;
+
+    &.ui-state-highlight {
+      background-color: $stateHighlightBgColor;
+      color: $stateHighlightTextColor;
+    }
+
+    &.ui-contextmenu-selected {
+      background-color: lighten($stateHighlightBgColor, 20%);
+      color: $stateHighlightTextColor;
+    }
+  }
+}
+
+.ui-column-title {
+  color: white;
+  font-family: $fontFamily;
+  align-content: left;
+}

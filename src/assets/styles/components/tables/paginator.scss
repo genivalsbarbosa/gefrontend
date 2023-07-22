@@ -1,0 +1,23 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-paginator {
+  border: 0 none;
+
+  .ui-paginator-element {
+    border: 0 none;
+  }
+
+  .ui-paginator-page.ui-state-default {
+    background: transparent;
+    color: $p360blue;
+    border-color: $p360blue;
+  }
+
+  .ui-paginator-page.ui-state-active {
+    background: $p360selectioncolor;
+    color: $p360blue;
+    border-color: transparent;
+  }
+}

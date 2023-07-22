@@ -1,0 +1,118 @@
+//@import "assets/theme/P360/theme";
+
+// Fontes
+// $fontFamily: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+$fontFamily: $font-family !important;
+$fontSize: 1.3rem;
+$borderRadius: 3px;
+$disabledOpacity: 0.5;
+
+// Border
+$borderColorAccordion: #ced4da;
+
+// Header
+$headerBorderWidth: 1px;
+$headerBorderColor: #d9d9d9;
+$headerBgColor: #f6f7f9;
+$headerTextColor: #1b1d1f;
+$headerFontWeight: normal;
+$headerIconTextColor: #1b1d1f;
+
+// Content
+$contentBorderWidth: 1px;
+$contentBorderColor: #d5d5d5;
+$contentBgColor: #ffffff;
+$contentTextColor: #4c4c4c;
+
+// Default State
+$stateDefaultBorderWidth: 1px;
+$stateDefaultBorderColor: #d6d6d6;
+$stateDefaultBgColor: #ffffff;
+$stateDefaultTextColor: #4c4c4c;
+
+// Active State
+$stateActiveBorderColor: #bebebe;
+$stateActiveBgColor: transparent;
+$stateActiveTextColor: #4c4c4c;
+
+// Highlight State
+$stateHighlightBorderColor: $color-brand-primary-medium;
+$stateHighlightBgColor: rgb(236, 236, 236);
+$stateHighlightTextColor: #4c4c4c;
+$p360highlightbackground: white;
+
+// Focus State
+$stateFocusBorderColor: #c0c0c0;
+$stateFocusBgColor: #eeeeee;
+$stateFocusTextColor: #212121;
+
+// Error State
+$stateErrorBorderColor: #f44336;
+$stateErrorBgColor: #f5554a;
+$stateErrorTextColor: #cd0a0a;
+
+// Hover State
+$stateHoverBorderColor: #c0c0c0;
+$stateHoverBgColor: #eeeeee;
+$stateHoverTextColor: #212121;
+
+//Forms
+$inputBgColor: #ffffff;
+$inputTextColor: #222222;
+$invalidInputBorderColor: #f44336;
+$inputGroupTextColor: #222222;
+
+// clicáveis
+$piramideMenupaineldefaultColor: #4c4c4c;
+$piramideMenupainelhighlightColor: #4c4c4c;
+$piramideAccordionHeaderColor: #0b0b32;
+
+// tabela
+$piramidetabelazebradoColor: #f0f0f5;
+$piramidetableheader: #3b3d51;
+
+$p360pistar: $color-brand-primary-medium;
+$p360pistarhover: #ced4da;
+
+// botoes
+$p360blue: $color-brand-primary-medium;
+
+// expanded colors
+$p360accordionbackgroundcolor: #f0f0f5;
+
+// selection color
+$p360selectioncolor: #c8dcf0;
+$p360highlightblue: #00a0dc;
+
+// Fontes
+$fontFamily: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif !important;
+
+// Cores
+$colorP360Gray: #4c4c4c;
+$piramidePrimayblue: #3b3d51;
+
+//clicáveis
+$piramideClicaveisColor: #4c7a92;
+
+//tabela
+$piramidetabelazebradoColor: #f3f3f3;
+
+//botoes
+$p360blue: #3b3d51;
+$p360bluedefault: $color-brand-primary-medium;
+$p360botaoprimarioHover: #033261;
+$p360botaoprimarioFocus: #0667c8;
+
+$p360botaosecundario: #fff;
+$p360botaosecundarioHover: #f0f0f5;
+$p360botaosecundarioFocus: #ced4da;
+
+$p360botaoterciario: #fff;
+$p360botaoterciarioHover: #033261;
+$p360botaoterciarioFocus: #0667c8;
+
+$backgroundColorDisabled: #f5f5f7; // #fafafa;
+$borderColorDisabled: 1px solid #ced4da;
+
+$widthMenuMobile: 360px;
+$topMenuMobile: 61px;

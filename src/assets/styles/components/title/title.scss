@@ -1,0 +1,137 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+//  campos obrigatorios
+.label-campos-obrigatorios {
+  display: block;
+  position: inherit;
+  // padding-top: 10px;
+
+  p {
+    float: right !important;
+    color: #ff0000;
+    margin: 10px 0 5px 0;
+  }
+  // @media screen and (max-width: 992px) {
+  //   padding-top: 120px;
+  // }
+}
+
+// Responsividade do titulo das telas, usado apenas quando tem caixas de informativos á direta do titulo
+.box-title-mobile {
+  @media (max-width: 993px) {
+   // margin-bottom: 80px;
+  }
+  @media (max-width: 769px) {
+   // margin-bottom: 105px;
+  }
+  @media (max-width: 670px) {
+    //margin-bottom: 100px;
+  }
+
+  @media (max-width: 375px) {
+   // margin-bottom: 95px;
+  }
+}
+
+// box titulo
+.box-titulo-info {
+  border: 1px solid #ced4da;
+  border-radius: 0px;
+  padding-left: 15px;
+  padding-right: 0;
+  // position: absolute;
+  // right: 0;
+  z-index: 90;
+  height: 110px;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 10px;
+  float: right;
+
+  .box-label {
+    margin-bottom: 0;
+
+    label {
+      color: #202020;
+      font-weight: 500;
+    }
+  }
+
+  .sidebar {
+    margin-bottom: 15px;
+  }
+
+  @media (max-width: 992px) {
+    // margin-top: 10rem;
+    // width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0 !important;
+    .box-body-info {
+      display: flex;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    // margin-top: 115px;
+    // width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0 !important;
+
+    &.sidebar {
+      margin-top: 77px;
+      padding-top: 11px;
+    }
+  }
+
+  @media (min-width: 578px) and (max-width: 767px) {
+    // margin-top: 120px;
+    // width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0 !important;
+
+    &.sidebar {
+      margin-top: 98px;
+      padding-top: 11px;
+    }
+  }
+
+  @media (min-width: 342px) and (max-width: 577px) {
+    // margin-top: 117px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: 0 !important;
+
+    &.sidebar {
+      margin-top: 94px;
+      padding-top: 11px;
+    }
+  }
+
+  @media (max-width: 341px) {
+    // margin-top: 110px;
+    width: 100%;
+
+    &.sidebar {
+      margin-top: 92px;
+      padding-top: 11px;
+    }
+  }
+
+  // Ajuste do tamanho da imagem do logo da tela de cadastro
+  @media screen and (min-width: 320px) {
+    .imgLogo {
+      app-logopicker {
+        .imagem-logo {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+}

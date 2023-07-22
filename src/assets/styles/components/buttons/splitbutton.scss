@@ -1,0 +1,99 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+/* ==========================================================================
+  SplitButton
+============================================================================ */
+.ui-splitbutton .ui-button {
+  vertical-align: middle;
+  padding: 0.21rem;
+
+  @media screen and (max-width: 414px) {
+    width: 185px;
+  }
+}
+
+/* ==========================================================================
+  SplitButton Primary
+============================================================================ */
+.ui-splitbutton .ui-button-primary .ui-state-default .ui-button:focus .ui-widget-header .ui-button,
+.ui-widget-content .ui-button,
+.ui-widget.ui-button,
+.ui-button {
+  background-color: $p360blue;
+  color: $color-neutral-lightest; // cor do icone e texto
+  border: 1px solid $color-neutral-lightest;
+  font-weight: normal;
+  font-family: $fontFamily;
+  height: 30px;
+  border-radius: 0px;
+  &:hover {
+    background: #f0f0f5;
+    color: $color-brand-primary-medium;
+  }
+
+  &:disabled {
+    background: $color-neutral-lightest;
+    border-color: #707070 !important;
+    color: #707070 !important;
+    cursor: not-allowed !important;
+    opacity: 0.5;
+  }
+}
+
+/* ==========================================================================
+  SplitButton Secondary
+============================================================================ */
+.ui-splitbutton-secondary
+  .ui-button-secondary
+  .ui-state-default
+  .ui-button:focus
+  .ui-button.ui-button-secondary.ui-state-default,
+.ui-splitbutton.ui-button-secondary .ui-button.ui-state-default {
+  background-color: $color-neutral-lightest;
+  color: $color-brand-primary-medium; // cor do icone e texto
+  border: $border-width-hairline solid $color-brand-primary-medium;
+  font-weight: normal;
+  font-family: $fontFamily;
+  height: 31px;
+
+  &:hover {
+    background: $color-neutral-lightest;
+    color: $color-brand-primary-dark;
+    border: $border-width-hairline solid $color-brand-primary-dark;
+  }
+
+  &:disabled {
+    background: $color-neutral-lightest;
+    border-color: #707070 !important;
+    color: #707070 !important;
+    cursor: not-allowed !important;
+    opacity: 1;
+  }
+}
+
+/* ==========================================================================
+  SplitButton Success
+============================================================================ */
+.ui-splitbutton .ui-button-success .ui-state-default .ui-button:focus .ui-button.ui-button-success.ui-state-default,
+.ui-splitbutton.ui-button-success .ui-button.ui-state-default {
+  background-color: #337811;
+  color: $color-neutral-lightest; // cor do icone e texto
+  border: 1px solid $color-neutral-lightest;
+  font-weight: normal;
+  font-family: $fontFamily;
+  height: 30px;
+
+  &:hover {
+    background: #f0f0f5;
+    color: $color-brand-primary-medium;
+  }
+  &:disabled {
+    background: $color-neutral-lightest;
+    border-color: #707070;
+    color: #707070;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

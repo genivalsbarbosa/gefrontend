@@ -1,0 +1,30 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-tabview {
+  &.ui-widget-content {
+    border: 0 none;
+  }
+
+  .ui-tabview-nav {
+    background: transparent;
+
+    li {
+      &.ui-state-default {
+        background: yellow;
+        border-color: white;
+      }
+
+      &.ui-state-active {
+        background: #ffffff;
+        font-weight: normal;
+        color: #4c4c4c;
+      }
+
+      &:not(.ui-state-active):not(.ui-state-disabled):hover {
+        background: #ededf0;
+      }
+    }
+  }
+}

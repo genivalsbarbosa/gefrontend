@@ -1,0 +1,131 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.table-edit {
+
+  .th {
+    background: $color-brand-primary-darkest !important;
+    border: 1px solid $color-brand-primary-darkest !important;
+  }
+
+  td {
+    input,
+    textarea {
+      color: #7f7f85;
+    }
+  }
+
+  .tr {
+    .td {
+      margin: 0;
+      padding: 0;
+
+      a {
+        display: block;
+        padding: 1rem;
+        white-space: initial;
+      }
+
+      .ui-inputtext {
+        padding: 1rem !important;
+        height: 39px;
+        border-radius: 0 !important;
+
+        &[disabled] {
+          border: 0 none;
+          background: #e8e8e8 !important;
+        }
+      }
+    }
+  }
+}
+
+// Estilos tela detalhar - campos desabilitados
+.tela-detalhar {
+  .table-edit {
+    .tr {
+      .td,
+      textarea,
+      input {
+        background-color: #f5f5f7 !important;
+      }
+    }
+  }
+}
+
+.tituloTableEdit {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 10px 0 5px 0;
+  color: #0b0b32;
+}
+
+.paginacao .ui-paginator .ui-dropdown {
+  min-width: 65px;
+  float: left;
+
+  @media screen and (max-width: 400px) {
+    float: center;
+  }
+
+  .ui-dropdown-label {
+    &::before {
+      content: "Mostrar resultados: ";
+      float: left;
+      padding: 1px 8px 1px 1px;
+      color: #4c4c4c;
+    }
+  }
+  .ui-dropdown-panel {
+    height: 0px;
+
+    .ui-dropdown-items-wrapper {
+      background-color: #fff;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+      position: absolute;
+      width: 34%;
+      z-index: 90;
+      margin-left: 73%;
+    }
+  }
+}
+
+.ui-inputswitch-on {
+  background: #186ba0 !important;
+  color: #ffffff !important;
+}
+
+.ui-paginator-bottom {
+  position: relative;
+
+  .ui-inputwrapper-filled {
+    position: absolute;
+    left: 0;
+
+    @media screen and (max-width: 450px) {
+      position: absolute;
+      margin-top: 35px;
+      left: 28%;
+    }
+
+    @media screen and (min-width: 396px) and (max-width: 412px) {
+      left: 26%;
+    }
+
+    @media screen and (max-width: 364px) {
+      left: 18%;
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 364px) {
+      left: 21%;
+    }
+
+    &::before {
+      content: "Mostrar resultados:";
+      float: left;
+      padding: 4px 0;
+      color: #4c4c4c;
+    }
+  }
+}

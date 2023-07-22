@@ -1,0 +1,77 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-treetable {
+  position: relative;
+  margin-top: 0px;
+
+  th.ui-state-default {
+    background: $color-brand-primary-darkest;
+    border-color: transparent;
+  }
+  table {
+    background: $color-brand-primary-darkest;
+  }
+
+}
+
+// .ui-treetable-row-selectable td:first-child span
+.ui-treetable-child-table-container {
+  .ui-treetable-row-selectable {
+    .ui-treetable-toggler {
+      padding-left: 0.5rem;
+    }
+
+    td:first-child span {
+      padding-left: 3.2rem;
+    }
+  }
+}
+
+.ui-treetable-wrapper {
+  overflow: auto !important;
+}
+
+
+// cabeçalho do treetable
+.ui-treetable .ui-treetable-thead > tr > th {
+  background-color: #3b3d51;
+  color: white !important;
+  border: none;
+  padding-left: 10px;
+}
+
+// conteudo do treetable
+.ui-treetable .ui-treetable-tbody > tr > td {
+  height: 25px;
+  color: $contentTextColor;
+
+  span {
+    word-break: break-all;
+    white-space: pre-wrap !important;
+
+    // referente apenas aos valores dos registros da tabela
+    a {
+      float: right;
+      color: $color-brand-primary-medium;
+      text-decoration: none;
+    }
+  }
+
+  /* reponsavel pela ideitação do icone e numeros da 1º coluna */
+  &:first-child {
+    padding: 0 !important;
+    position: relative;
+    margin: 0 !important;
+  }
+
+  // coluna de linha onde tem icone e numeração de conteudos
+  // Ajustado o posicionamento das setas retirando alguas atributos do span e da classe da seta.
+  // Foi ajustado o html e scss do treetable incrementando o operador ternário do ngclass para aplicar o espaçamento apenas
+  // nas linhas que não tem filhos para o span ficar alinhado.
+  .ui-treetable-toggler {
+    top: 2px;
+    left: 2px;
+  }
+}

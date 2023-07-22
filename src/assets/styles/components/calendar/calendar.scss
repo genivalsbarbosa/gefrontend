@@ -1,0 +1,28 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+p-calendar.form-control {
+  padding: 0 !important;
+
+  input {
+    padding: 0.68rem !important;
+  }
+  &:hover {
+    border: 1px solid #4c4c4c;
+  }
+}
+
+.ui-calendar {
+  display: block;
+}
+
+// .ui-calendar:not(.ui-state-disabled):active {
+//   border: 1px solid #156090;
+// }
+.ui-calendar.ui-state-focus {
+  border: 1px solid #156090;
+}
+.ui-calendar.ui-state-focus:hover {
+  border: 1px solid #4c4c4c;
+}

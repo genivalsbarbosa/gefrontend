@@ -1,0 +1,51 @@
+
+<label for="exampleFormControlInput1" class="form-label">
+  <span *ngIf="obrigatorio">* </span>{{ nome }}<span *ngIf="nome != ''" style='color:#4c4c4c; font-size: 1.1rem'>:</span>
+</label>
+<input 
+  type="text" 
+  class="medi-input" 
+  id="{{identificador}}"
+  [(ngModel)]="valor"
+  (blur)="onblurr(receber.value)"
+  [maxLength]="tamanho"
+  [disabled]="desabilitar"
+  #receber
+  pInputText/>
+
+<!--
+<div [ngClass]="{'box-range': estiloFavorito}">
+  <div [ngClass]="{'col-range': estiloFavorito, 'col-range-full': estiloFavorito}">
+    <div class="form-group">
+      <div [ngClass]="{ 'campoInformativoBorda':(desabilitar == true) }">
+
+        <div class="box-label">
+          <label (click)="cliqueLabel()">
+            <span *ngIf="obrigatorio">* </span>{{ nome }}<span *ngIf="nome != ''" style='color:#4c4c4c; font-size: 1.1rem'>:</span>
+          </label>
+        </div>
+
+        <span [pTooltip]="valorInicial" tooltipPosition="top" tooltipZIndex="99999999">
+
+          <input
+            class="form-control"
+            [ngClass]="{campoobrigatorioativo: (mensagem!='' && tipoErro), campoobrigatorioativosucesso: (mensagem!='' && tipoSucesso), campoobrigatorioativoaviso: (mensagem!='' && tipoAviso)}"
+            id="{{identificador}}"
+            [(value)]="valorInicial"
+            (blur)="onblurr(receber.value)"
+            (input)="enviarValor(receber.value)"
+            (paste)="onPaste()"
+            [(apenasnumero)]="apenasnumero"
+            [(apenasxponto)]="apenasxponto"
+            [maxLength]="tamanho"
+            [(disabled)]="desabilitar"
+            #receber
+            pInputText>
+
+          </span>
+
+      </div>
+    </div>
+  </div>
+</div>
+-->

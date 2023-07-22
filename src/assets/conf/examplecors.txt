@@ -1,0 +1,15 @@
+"IP_BYPASS_CORS": "https://cors-anywhere.herokuapp.com/"
+https://cors-anywhere.herokuapp.com/corsdemo
+
+servidor aplicação
+
+login: mediflowserver
+senha: Med!flows3rv3r
+
+20.226.4.208
+
+
+
+node --max_old_space_size=14336  node_modules/@angular/cli/bin/ng build --prod=true --baseHref=/mediflow/
+
+ng build --base-href=/mediflow/

@@ -1,0 +1,79 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-accordion {
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  margin-bottom: 0.2rem;
+  position: relative;
+  float: left;
+  width: 100%;
+
+  .ui-accordion-toggle-icon {
+    color: $piramideAccordionHeaderColor;
+  }
+
+  .ui-accordion-header-text {
+    color: $piramideAccordionHeaderColor;
+    font-weight: normal;
+    font-family: $fontFamily;
+    font-size: 1.5rem;
+    line-height: 1em;
+  }
+
+  .ui-accordion-header {
+    background-color: transparent;
+    border: 0 none;
+
+    a {
+      color: $headerTextColor;
+      padding: 0.9rem 1rem 0.8rem;
+
+      &:hover {
+        color: $headerTextColor;
+        text-decoration: none;
+      }
+    }
+
+    &:not(.ui-state-active):not(.ui-state-disabled):hover {
+      background: transparent;
+      border: 0 none;
+    }
+
+    &.ui-state-active {
+      background: transparent;
+      border: 0 none;
+    }
+  }
+
+  .ui-accordion-content {
+    background: transparent;
+    border: 0 none;
+    float: left;
+    padding: 0;
+    zoom: 1;
+    z-index: 90;
+    width: 100%;
+  }
+
+  .ui-accordion-content-wrapper {
+    background: transparent;
+    float: left;
+    border: 0 none;
+    width: 100%;
+    z-index: 10;
+  }
+}
+
+.accordion-fields-required-campos-dinamicos {
+  display: none;
+  width: 20rem;
+
+  p {
+    color: red;
+    font-family: $fontFamily;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+  }
+}

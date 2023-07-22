@@ -1,0 +1,269 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-inputtext {
+  background-color: transparent;
+  border: transparent 1px solid;
+  border-radius: 0px;
+  font-size: 1.6rem;
+  padding: 0.35rem 0.7rem !important;
+  font-weight: 500;
+  line-height: 1.2rem;
+  outline: none;
+  width: 115px;
+  transition: border-color 0.2s ease-in;
+
+  &:not(:disabled) {
+    color: $color-brand-primary-medium;
+
+    &:hover,
+    &:focus {
+      border-color: #e5e5e5;
+    }
+  }
+
+  &:disabled,
+  &[ng-reflect-disabled="true"] {
+    color: #555;
+    background-color: transparent;
+    background-color: transparent;
+    background-color: transparent;
+    border-color: transparent;
+    padding-left: 0 !important;
+
+    &:hover,
+    &:focus {
+      border-color: transparent;
+    }
+  }
+
+  .ui-calendar {
+    .ui-inputtext {
+      padding: 0.2rem 0 !important;
+      border-color: transparent;
+    }
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 337px) {
+  .ui-inputtext {
+    font-size: 1.4rem;
+    width: 91px;
+  }
+}
+
+@media screen and (min-width: 337px) and (max-width: 360px) {
+  .ui-inputtext {
+    font-size: 1.4rem;
+    width: 95px;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 367px) {
+  .ui-inputtext {
+    font-size: 1.4rem;
+    width: 100px;
+  }
+}
+
+@media screen and (min-width: 367px) and (max-width: 383px) {
+  .ui-inputtext {
+    font-size: 1.4rem;
+    width: 98px;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 405px) {
+  .ui-inputtext {
+    font-size: 1.6rem;
+    width: 98px;
+  }
+}
+
+@media screen and (min-width: 405px) and (max-width: 415px) {
+  .ui-inputtext {
+    font-size: 1.6rem;
+    width: 99px;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 425px) {
+  .ui-inputtext {
+    font-size: 1.6rem;
+    width: 99px;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 575px) {
+
+  .ui-inputtext {
+    font-size: 1.4rem;
+    width: 95px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width: 576px) {
+
+  .ui-inputtext {
+    font-size: 1.4rem;
+    width: 95px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.box-body-info {
+  .ui-inputtext {
+    background-color: transparent;
+    border: transparent 1px solid;
+    border-radius: 0px;
+    font-size: 1.6rem;
+    padding: 0.35rem 0.7rem !important;
+    font-weight: 500;
+    line-height: 1.2rem;
+    outline: none;
+    // width: 115px;
+    text-align: left !important;
+    width: 100%;
+    transition: border-color 0.2s ease-in;
+
+    &:not(:disabled) {
+      color: $color-brand-primary-medium;
+
+      &:hover,
+      &:focus {
+        border-color: #e5e5e5;
+      }
+    }
+
+    &:disabled,
+    &[ng-reflect-disabled="true"] {
+      color: #4c4c4c;
+      background-color: transparent;
+      border-color: transparent;
+      padding-left: 0 !important;
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+      }
+    }
+
+    .ui-calendar {
+      .ui-inputtext {
+        padding: 0.2rem 0 !important;
+        border-color: transparent;
+        width: 90px;
+      }
+    }
+  }
+}
+
+.info-detalhamento {
+  .ui-inputtext {
+    background-color: transparent;
+    border: transparent 1px solid;
+    border-radius: 0px;
+    padding: 0.35rem 0.7rem !important;
+    font-weight: 500;
+    outline: none;
+    width: 100%;
+    transition: border-color 0.2s ease-in;
+
+    &:not(:disabled) {
+      color: $color-brand-primary-medium;
+
+      &:hover,
+      &:focus {
+        border-color: #e5e5e5;
+      }
+    }
+
+    &:disabled,
+    &[ng-reflect-disabled="true"] {
+      color: #555;
+      background-color: transparent;
+      border-color: transparent;
+      padding-left: 0 !important;
+
+      &:hover,
+      &:focus {
+        border-color: transparent;
+      }
+    }
+
+    .ui-calendar {
+      .ui-inputtext {
+        padding: 0.2rem 0 !important;
+        border-color: transparent;
+      }
+    }
+  }
+}
+
+.ui-inputtext {
+
+  background: transparent;
+  border-radius: $border-radius-xs !important;
+  color: $color-neutral-darkest !important;
+  font-family: $font-family !important;
+  font-size: $font-size-xs !important;
+  font-weight: $font-weight-regular !important;
+  line-height: 1rem;
+  // padding: 0.5rem 1rem;
+  padding: 8px;
+  width: 100%;
+  max-width: 100%;
+  // -webkit-transition: all .2s ease-in-out;
+  // -moz-transition   : all .2s ease-in-out;
+  // transition        : all .2s ease-in-out;
+
+  @media (max-width: 575px) {
+    padding: 0.5rem;
+  }
+
+  &.ui-listbox {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.ui-inputtext.ui-state-focus,
+.ui-inputtext:focus {
+  box-shadow: none;
+  // background     : white;
+  //color           : $piramideMenupainelhighlightColor;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  height: 33px;
+}
+
+.ui-listbox-header {
+  .ui-inputtext {
+    padding: 0.3rem 0.1rem 0.1rem 2rem;
+    line-height: 1.5rem;
+  }
+
+  .ui-listbox-filter-container .fa {
+    color: gray;
+  }
+}
+
+.ui-inputtext.ui-listbox {
+  .ui-widget:disabled {
+    border: 0 none;
+  }
+
+  .ui-widget-header {
+    background-color: $backgroundColorDisabled;
+  }
+}
+
+.dialog-conteudo {
+  .ui-inputtext {
+    color: #868e96;
+  }
+}

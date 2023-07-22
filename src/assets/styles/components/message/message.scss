@@ -1,0 +1,28 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-messages {
+  background-color: $p360selectioncolor;
+}
+
+.error-validation-message {
+  color: $color-feedback-danger-medium !important;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.success-validation-message {
+  color: $color-feedback-success-dark !important;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.warning-validation-message {
+  color: $color-feedback-warning-dark !important;
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}

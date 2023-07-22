@@ -1,0 +1,59 @@
+.ui-tree .ui-treenode {
+  padding: 0.5rem;
+}
+
+.ui-tree .ui-chkbox .ui-chkbox-icon {
+  display: block;
+  height: 100%;
+  padding: 0.2rem 0;
+  line-height: 1.5rem;
+
+  &.fa-check {
+    border: 1px solid #d3d5d8;
+    background: $color-brand-primary-medium;
+    color: #ffffff;
+    display: block;
+    padding: 0.15rem 0;
+    margin: -1px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.ui-tree .ui-tree-filter-container .ui-tree-filter-icon {
+  color: $color-neutral-light;
+  font-size: 18px;
+  top: 0.65em;
+  right: 0.65em;
+}
+
+.ui-tree .ui-chkbox .ui-chkbox-icon {
+  padding: 0.1rem 0;
+  margin-left: 0;
+}
+
+.ui-tree-filter-container {
+  .ui-inputtext {
+
+    &:focus {
+      border: $border-width-hairline $color-brand-primary-darkest solid !important;
+      box-shadow: $shadow-level-0 rgba($color-brand-primary-darkest, $opacity-level-low)!important;
+    }
+  }
+}
+
+.ui-tree-container {
+  .ui-treenode {
+    .ui-treenode-content {
+      .ui-treenode-label {
+        font-weight: $font-weight-bold;
+        color: $color-neutral-darkest;
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+.ui-tree .ui-tree-filter {
+  height: 31px;
+}

@@ -1,0 +1,50 @@
+<div class="container">
+
+    <div class="row">                
+        <div class="col-lg-12" style="text-align: center"> 
+            <img src="assets/images/logo/mediflowlogo.png" class="logo-img" border="0">
+        </div>
+    </div>
+
+    <div class="row">                
+        <div class="col-lg-12" style="text-align: center"> 
+            <input
+                placeholder="Login"
+                class="form-control ui-inputtext ui-corner-all ui-state-default ui-widget ui-state-filled"
+                id="login"
+                type="text" 
+                [(ngModel)]="login.Usuario"
+            >
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-12" style="text-align: center">
+            <!--
+            <mat-form-field appearance="outline">
+                <mat-label>Outline form field</mat-label>
+                <input matInput placeholder="Placeholder">
+                <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+            -->
+            <input
+                placeholder="Senha"
+                class="form-control ui-inputtext ui-corner-all ui-state-default ui-widget ui-state-filled"
+                id="senha"
+                type="password"
+                [(ngModel)]="login.Password">
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-lg-12" style="text-align: center">
+            <button
+                class="btn btn-primary"
+                type="submit"
+                (click)="onSignin()" > 
+                Entrar 
+            </button>
+        </div>
+    </div>
+</div>

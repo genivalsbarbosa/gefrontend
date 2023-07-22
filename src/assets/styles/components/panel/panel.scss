@@ -1,0 +1,26 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-panel.ui-widget {
+  padding: 0;
+
+  .ui-panel-titlebar.ui-corner-all {
+    -moz-border-radius-bottom-left: 0;
+    -webkit-border-bottom-left-radius: 0;
+    border-bottom-left-radius: 0;
+    -moz-border-radius-bottom-right: 0;
+    -webkit-border-bottom-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .ui-panel-titlebar {
+    border-width: 0;
+  }
+
+  .ui-panel-titlebar-icon span {
+    position: relative;
+    top: 1px;
+    color: transparent;
+  }
+}

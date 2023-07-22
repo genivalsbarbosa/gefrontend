@@ -1,0 +1,589 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.tituloDatatable {
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 5px 0 0px 0;
+  color: #0b0b32;
+}
+
+.ui-datatable {
+  .ui-dropdown .ui-dropdown-trigger > .fa {
+    background-color: transparent;
+  }
+}
+
+.ui-datatable .ui-datatable-header,
+.ui-datatable .ui-paginator-bottom,
+.ui-datatable .ui-datatable-footer {
+  &.ui-widget-header {
+    background-color: transparent;
+
+    @media screen and (max-width: 450px) {
+      margin-top: 15px;
+    }
+  }
+}
+
+.ui-datatable .ui-paginator .ui-dropdown-panel .ui-dropdown-items-wrapper {
+  width: 118%;
+}
+
+.ui-state-default {
+  background: transparent;
+
+  &:hover {
+    background: #fff;
+  }
+}
+
+.ui-state-active {
+  background: transparent;
+}
+
+.ui-state-active:hover {
+  background: transparent;
+}
+
+.ui-state-default:hover {
+  background: transparent;
+}
+
+.ui-state-highlight {
+  background: transparent;
+}
+
+// ----------------------------------- //
+
+.ui-datatable .ui-datatable-data,
+.ui-datatable tbody > tr {
+  vertical-align: top;
+}
+
+.datatable-noedit {
+  .ui-datatable {
+    //Comentado para resolver o problema do redimencionamento das colunas e adicionado controle do style
+    //das td's e th's no ts.
+
+    table {
+      min-width: 100%;
+      width: auto;
+    }
+
+    /*
+    .ui-datatable-thead {
+      tr {
+        border: 0 none;
+      }
+    }
+    */
+
+    .box-cols-exportar {
+      .box-colunas {
+        text-align: left;
+        margin: 0 0 1rem;
+        width: 100%;
+        position: relative;
+        float: left;
+      }
+
+      .box-personalizar {
+        float: left;
+      }
+
+      .input-search {
+        float: right;
+        margin-right: 20px;
+      }
+
+      .btn-exportar {
+        float: right;
+        color: $color-brand-primary-medium !important;
+      }
+    }
+
+    .ui-paginator-bottom {
+      padding: 1rem 0;
+      text-align: right;
+
+      @media screen and (max-width: 450px) {
+        text-align: center;
+      }
+    }
+
+    .ui-inputwrapper-filled {
+      line-height: 1.5rem;
+    }
+
+    .ui-datatable-footer {
+      padding: 0;
+      text-align: center;
+
+      @media screen and (min-width: 425px) and (max-width: 450px) {
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 28%;
+      }
+
+      @media screen and (min-width: 414px) and (max-width: 425px) {
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 28%;
+      }
+
+      @media screen and (max-width: 413px) {
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 26%;
+      }
+
+      @media screen and (min-width: 364px) and (max-width: 395px) {
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 28%;
+      }
+
+      @media screen and (min-width: 350px) and (max-width: 364px) {
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 21%;
+      }
+
+      @media screen and (min-width: 320px) and (max-width: 350px) {
+        text-align: left;
+        padding-top: 20px;
+        padding-left: 19%;
+      }
+    }
+  }
+}
+
+.ui-datatable .ui-datatable-thead > tr > th,
+.ui-datatable .ui-datatable-tfoot > tr > td,
+.ui-datatable .ui-datatable-data > tr > td {
+  border-color: inherit;
+  box-sizing: border-box;
+  padding: 1rem;
+  border: 0 none;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.table-opcoes {
+  margin: 1rem 0;
+
+  .ui-datatable {
+    table {
+      table-layout: auto;
+    }
+  }
+}
+
+.ui-datatable {
+  &.ui-datatable-resizable {
+    overflow: initial;
+  }
+
+  .ui-datatable-data {
+    textarea.textarea-tr {
+      background-color: transparent;
+      height: 25px;
+      line-height: 1.5rem;
+      transition: height 0.5s ease-in-out;
+    }
+
+    & > tr.onFocusTr textarea.textarea-tr {
+      height: 80px;
+    }
+  }
+
+  .ui-selection-column {
+    .ui-chkbox {
+      height: auto; // 15px
+    }
+  }
+}
+
+@keyframes delay-overflow {
+  from {
+    white-space: nowrap;
+    overflow: hidden;
+    transition: all 5s linear;
+  }
+
+  to {
+    white-space: normal;
+    overflow: auto;
+    transition: all 5s linear;
+  }
+}
+
+.ui-cell-data {
+  font-size: 1.2rem;
+  font-family: $fontFamily;
+  color: $piramideMenupainelhighlightColor;
+}
+
+.ui-datatable-emptymessage {
+  color: #4c4c4c;
+  font-family: $fontFamily;
+}
+
+.ui-datatable {
+  thead tr {
+    border-width: 1px;
+  }
+
+  .ui-datatable-tablewrapper {
+    border: transparent;
+  }
+
+  .ui-sortable-colum {
+    border-color: #3b3d51;
+    text-align: left;
+  }
+
+  th {
+    &.ui-state-default {
+      background: $color-brand-primary-darkest;
+      border-color: transparent;
+      text-align: left;
+      color: #4c4c4c;
+      border: $color-brand-primary-darkest;
+    }
+
+    &.ui-sortable-column:not(.ui-state-active) {
+      background: $color-brand-primary-darkest;
+      border-color: transparent;
+      color: $piramidetabelazebradoColor;
+    }
+
+    &.ui-sortable-column:not(.ui-state-active):hover {
+      background: $color-brand-primary-darkest;
+      border-color: transparent;
+      color: white;
+    }
+
+    &.ui-state-active {
+      background: $color-brand-primary-darkest;
+      color: white;
+      font-weight: bold;
+      border-bottom: transparent;
+    }
+  }
+
+  tbody {
+    tr.ui-widget-content {
+      border: transparent;
+      background-color: $piramidetabelazebradoColor;
+
+      &.ui-datatable-odd {
+        border: transparent;
+        background-color: white;
+      }
+
+      &.ui-state-highlight {
+        background-color: $p360selectioncolor;
+        border: transparent;
+      }
+    }
+  }
+
+  tfoot {
+    td {
+      &.ui-state-default {
+        background: #ebedf0;
+        border: transparent;
+      }
+    }
+  }
+}
+
+/* Alinhar botoes da grid */
+
+.ui-datatable {
+  & .ui-datatable-header,
+  & .ui-datatable-caption,
+  & .ui-datatable-footer {
+    padding: 0;
+  }
+
+  & .ui-datatable-header {
+    padding-bottom: 0;
+  }
+
+  .ui-sortable-column {
+    line-height: 0;
+  }
+}
+
+.ui-datatable .ui-datatable-tablewrapper {
+  border: 0 none;
+  padding: 0;
+}
+
+.box-pesquisar {
+  .ui-autocomplete-input {
+    &.ui-autocomplete-input {
+      border-radius: 0px;
+      width: 200px;
+      padding: 0.8rem 1rem;
+    }
+  }
+}
+
+
+// ----------------------- //
+.datatable-edit {
+  .ui-datatable {
+    table {
+      width: 100%;
+    }
+
+    .ui-editable-column {
+      input {
+        padding: 0;
+      }
+    }
+  }
+
+  /* Problema resolvido com a tabela editável */
+
+  .ui-datatable-data {
+    .ui-editable-column {
+      span.ui-cell-data.ng-star-inserted {
+        display: none !important;
+      }
+
+      div.ui-cell-editor.ng-star-inserted {
+        display: block !important;
+      }
+
+      .ui-cell-editor {
+        a {
+          color: #4c4c4c;
+          display: block;
+          line-height: 3rem;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  /* Problema resolvido com a tabela editável */
+
+  .ui-datatable .ui-datatable-data > tr > td.ui-editable-column {
+    padding: 0.5em;
+    border: 1px solid lightgray;
+    background: transparent;
+  }
+
+  .ui-datatable .ui-datatable-data > tr > td.ui-editable-column.ui-cell-editing {
+    background: $p360selectioncolor;
+  }
+
+  .ui-datatable .ui-datatable-data > tr > td.ui-editable-column.ui-cell-editing,
+  .ui-datatable td.ui-editable-column:not(.ui-cell-editing) input,
+  .ui-datatable td.ui-editable-column:not(.ui-cell-editing) textarea {
+    background: transparent;
+    border: 0 none;
+  }
+
+  // Hover datatableedit editável
+
+  .ui-datatable tbody > tr.ui-widget-content {
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+    transition-delay: 2s;
+
+    &.onHoverClose {
+      background-color: #f0f0f5;
+
+      .ui-inputtext {
+        background-color: transparent;
+      }
+    }
+
+    & > td:last-child {
+      border-right: 1px solid lightgray;
+      border-bottom: 1px solid lightgray;
+      padding: 0;
+
+      .ui-cell-data {
+        display: block;
+        text-align: center;
+        font-size: 0;
+
+        a {
+          cursor: pointer;
+          margin: 0 auto;
+          text-align: center;
+          line-height: 1em;
+          font-size: 1.5rem;
+          display: block;
+        }
+
+        i {
+          padding: 1.2rem 1.5rem;
+        }
+      }
+    }
+  }
+
+  // Celula do Datatable editável quando é selecionada
+
+  .ui-datatable .ui-editable-column.ui-cell-editing > .ui-cell-editor {
+    display: block;
+    // padding-left: 5px;
+  }
+}
+
+.datatable-noedit {
+  .ui-datatable {
+    tbody.ui-datatable-hoverable-rows {
+      & > tr.ui-datatable-even:not(.ui-state-highlight) {
+        // &:hover {
+        //   border: solid 1px rgba(59, 61, 81, 0.5);
+        // }
+        &:focus {
+          background-color: $piramidetabelazebradoColor;
+        }
+      }
+
+      & > tr.ui-datatable-odd:not(.ui-state-highlight) {
+        // &:hover {
+        //   border: solid 1px rgba(59, 61, 81, 0.5);
+        // }
+        &:focus {
+          background-color: #fff;
+        }
+      }
+    }
+  }
+}
+
+// _____________________  //
+
+.datatable-gerencial {
+  .datatable-edit {
+    .ui-datatable .ui-datatable-data > tr {
+      & > td {
+        cursor: pointer;
+
+        &.ui-editable-column {
+          border: 0 none;
+          padding: 0; // 0 .5rem
+        }
+      }
+
+      &:nth-child(even) {
+        background-color: #f0f0f5;
+      }
+    }
+
+    .ui-state-disabled,
+    .ui-widget:disabled,
+    .form-control:disabled,
+    .form-control[readonly],
+    .form-control.disabled,
+    .form-control[ng-reflect-disabled="true"],
+    input[disabled] {
+      border: 0 none;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .ui-datatable .ui-editable-column input {
+      background-color: transparent;
+      cursor: pointer !important;
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+
+      &:active,
+      &:focus {
+        background-color: #c8dcf0;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+// DataTable Totalizador
+
+.ui-datatable-scrollable-view {
+  .ui-datatable-scrollable-footer,
+  .ui-datatable-scrollable-footer-box {
+    height: 0;
+    transition: height 0.3s ease-in-out;
+
+    &.show {
+      height: 26px;
+    }
+
+    tfoot {
+      & > tr {
+        border-top: 0 none;
+        vertical-align: middle;
+
+        td {
+          text-align: left;
+        }
+      }
+
+      td.ui-state-default {
+        background-color: #a0deb2;
+        color: #197835;
+        font-weight: 600;
+        height: 26px;
+        padding: 0 0.5rem; // 0 .5rem
+
+        span {
+          word-break: break-all;
+          margin: 0;
+          padding: 0;
+          height: 20px;
+          overflow: hidden;
+          display: block;
+        }
+      }
+    }
+
+    td {
+      border-right: 1px solid gray;
+    }
+  }
+
+  //
+  .row-totalizador {
+    td {
+      background-color: #a0deb2 !important;
+      color: #197835 !important;
+      font-weight: 600 !important;
+      height: 0;
+    }
+
+    &.show {
+      td {
+        height: 26px;
+      }
+    }
+  }
+}
+
+// ------------------- //
+
+.ui-datatable-thead {
+  tr:first-child {
+    background: $color-brand-primary-darkest;
+  }
+}
+
+.ui-datatable .ui-datatable-thead > tr > th,
+.ui-datatable .ui-datatable-tfoot > tr > td,
+.ui-datatable .ui-datatable-data > tr > td {
+  line-height: 20px;
+}

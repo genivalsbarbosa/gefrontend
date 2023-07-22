@@ -1,0 +1,7 @@
+{
+  "IP_SERVICE": "20.226.4.208/mediflowservice/",
+  "VERSAO": "Versão: 1.00.00",
+  "IP_SERVICO_CNPJ": "https://www.receitaws.com.br/v1/cnpj/",
+  "IP_SERVICO_CEP": "https://viacep.com.br/ws/",
+  "IP_BYPASS_CORS": "https://cors-anywhere.herokuapp.com/"
+}

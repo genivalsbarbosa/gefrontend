@@ -1,0 +1,37 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-togglebutton.ui-button.ui-state-default,
+.ui-selectbutton .ui-button.ui-state-default {
+  border: 0px solid #d6d6d6;
+  background: #ffffff;
+  font-weight: normal;
+  color: #555555;
+}
+
+.ui-togglebutton.ui-button.ui-state-hover,
+.ui-togglebutton.ui-button.ui-state-focus,
+.ui-selectbutton .ui-button.ui-state-hover,
+.ui-selectbutton .ui-button.ui-state-focus,
+.ui-selectbutton .ui-button:focus {
+  border: 1px solid #c0c0c0;
+  background: #eeeeee;
+  font-weight: normal;
+  color: $p360blue;
+}
+
+.ui-togglebutton.ui-button.ui-state-focus,
+.ui-selectbutton .ui-button.ui-state-focus.ui-state-active,
+.ui-selectbutton .ui-button.ui-state-active:focus {
+  -moz-box-shadow: 0px 0px 5px #f3f3f3;
+  -webkit-box-shadow: 0px 0px 5px #f3f3f3;
+  box-shadow: 0px 0px 5px #f3f3f3;
+}
+
+.ui-togglebutton.ui-button.ui-state-active,
+.ui-selectbutton .ui-button.ui-state-active {
+  border: 1px solid #156090;
+  background: #f3f3f3;
+  color: $piramideMenupaineldefaultColor;
+}

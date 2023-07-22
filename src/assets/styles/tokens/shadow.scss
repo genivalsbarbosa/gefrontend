@@ -1,0 +1,7 @@
+@import "./color.scss";
+@import "./opacity.scss";
+
+// Shadow
+$shadow-level-0: 0 0 0 3px;
+$shadow-level-1: 3px 3px 5px rgba($color-neutral-dark, $opacity-level-medium)!important;
+$shadow-level-2: 4px 8px 8px;

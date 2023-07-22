@@ -1,0 +1,385 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.btn {
+  font-size: $font-size-xs;
+  padding: $spacing-squish-nano;
+  font-family: $font-family;
+  font-weight: $font-weight-regular;
+  border-radius: $border-radius-xs;
+  line-height: 1;
+  height: 31px;
+
+  &:focus {
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+
+  &:disabled {
+    border-color: $color-neutral-light;
+    color: $color-neutral-dark;
+    cursor: not-allowed;
+    opacity: $opacity-level-medium;
+  }
+}
+
+.btn,
+.ui-splitbutton .ui-button {
+  padding: $spacing-squish-nano;
+}
+
+.btn-add {
+  background-color: transparent;
+  color: $colorP360Gray;
+  border: 1px solid lightgray;
+  // border-radius: 0px;
+  width: 100%;
+  display: inline-block;
+}
+
+.btn-add:hover {
+  background: $piramidetabelazebradoColor;
+  color: $colorP360Gray;
+  border: 1px solid lightgray;
+  // border-radius: 0px;
+  width: 100%;
+}
+
+.btn-primary {
+  background: $color-brand-primary-medium;
+  color: $color-neutral-lightest;
+  border: $border-width-hairline $color-brand-primary-medium solid;
+
+  &:hover {
+    box-shadow: $shadow-level-1;
+    background: $color-brand-primary-dark;
+    border: $border-width-hairline $color-brand-primary-dark solid;
+  }
+
+  &:focus {
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+
+  &:disabled {
+    background: $color-neutral-light;
+    border-color: $color-neutral-light;
+    color: $color-neutral-darkest;
+    cursor: not-allowed;
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  background-color: $color-brand-primary-darkest;
+  border-color: $color-brand-primary-darkest;
+  color: $color-neutral-lightest;
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+.btn-secondary {
+  background: $color-neutral-lightest;
+  border: $border-width-hairline $color-brand-primary-medium solid;
+  color: $color-brand-primary-medium;
+
+  &:hover {
+    background: $color-neutral-lightest;
+    color: $color-brand-primary-dark;
+    border: $border-width-hairline $color-brand-primary-dark solid;
+    box-shadow: $shadow-level-1;
+  }
+
+  // &:active,
+  // &:focus-visible {
+  //   background: $p360botaosecundarioFocus !important;
+  //   color: $p360bluedefault !important;
+  // }
+  &:focus-visible {
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+
+  &:disabled {
+    background: $color-neutral-light;
+    border-color: $color-neutral-light;
+    color: $color-neutral-darkest;
+    cursor: not-allowed;
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active {
+  background-color: $color-neutral-lightest;
+  border-color: $color-brand-primary-darkest;
+  color: $color-brand-primary-darkest;
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+.btn-warn {
+  background: $color-neutral-lightest;
+  border: $border-width-hairline $color-brand-primary-medium solid;
+  color: $color-brand-primary-medium;
+
+  &:hover {
+    // background: $color-feedback-danger-medium;
+    color: $color-feedback-danger-medium;
+    border: $border-width-hairline $color-feedback-danger-medium solid;
+    box-shadow: $shadow-level-1;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+
+  &:disabled {
+    background: $color-neutral-light;
+    border-color: $color-neutral-light;
+    color: $color-neutral-darkest;
+    cursor: not-allowed;
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+}
+
+.btn-warn:not(:disabled):not(.disabled):active {
+  background-color: $color-feedback-danger-dark;
+  border-color: $color-feedback-danger-dark;
+  color: $color-neutral-lightest;
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+.btn-back {
+  color: $color-neutral-dark;
+  background-color: $color-neutral-lightest;
+  border: $border-width-hairline $color-neutral-dark solid;
+  float: right !important;
+  margin-right: 0 !important;
+
+  &:focus-visible {
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+
+  &:disabled {
+    background: $color-neutral-light;
+    border-color: $color-neutral-light;
+    color: $color-neutral-darkest;
+    cursor: not-allowed;
+    box-shadow: 0 0 0 0 transparent !important;
+  }
+
+  @media screen and (max-width: 414px) {
+    float: none !important;
+  }
+}
+
+.btn-back:not(:disabled):not(.disabled):active {
+  border: $border-width-hairline  $color-neutral-darkest solid;
+  color: $color-neutral-darkest;
+  box-shadow: 0 0 0 0 transparent !important;
+}
+
+/*
+    .btn-terciary
+    {
+        color      : $p360bluedefault;
+        cursor     : pointer;
+        display    : inline-block;
+        font-size  : 1.3rem;
+        font-weight: 600;
+        line-height: 3rem;
+        margin-left: 1rem;
+        transition : color .5s ease-in-out;
+
+        &:hover
+        {
+            color: $p360botaoterciarioHover;
+        }
+
+        &:focus,
+        &:active
+        {
+            color: $p360botaoterciarioFocus !important;
+        }
+
+        &:disabled,
+        &.disabled
+        {
+            color  : $colorP360Gray !important;
+            opacity: .5;
+        }
+
+    }
+*/
+
+.btn-quaternary {
+  background: transparent;
+  border: $border-width-hairline solid $p360bluedefault;
+  color: $p360bluedefault;
+  // border-radius: 0px;
+  // display: inline-block;
+  // font-size: 1.25rem;
+  // line-height: 1.5rem;
+  // padding: 0.5rem 1.5rem;
+  // outline: none;
+  // text-decoration: none;
+  // transition: all 0.5s ease-in-out;
+
+  &:hover {
+    background-color: #d4d4d4;
+    text-decoration: none;
+  }
+
+  &:focus {
+    background-color: #c1c5f5;
+  }
+
+  &:disabled {
+    // background: transparent;
+    // border-color: #555;
+    // color: #555;
+
+    background: $color-neutral-light;
+    border-color: $color-neutral-light;
+    color: $color-neutral-darkest;
+    cursor: not-allowed;
+    box-shadow: 0 0 0 0 transparent !important;
+    opacity: $opacity-level-medium;
+  }
+}
+
+.btn-table {
+  background: #337811;
+  border-radius: 0px;
+  border-color: #337811;
+  box-shadow: 0 0 0 0 transparent !important;
+  color: #fff;
+  outline: none;
+
+  &:hover {
+    background: #1a631a;
+    border-color: #1a631a;
+    color: #fff;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-within {
+    background: #40c940;
+    border-color: #40c940;
+  }
+
+  &:disabled {
+    background: $colorP360Gray;
+    border-color: $colorP360Gray;
+    cursor: not-allowed;
+    opacity: $opacity-level-medium;
+  }
+}
+
+.btn-link {
+  background: transparent !important;
+  border: none !important;
+  color: $p360bluedefault;
+
+  &:active,
+  &:focus,
+  &:focus-within {
+    background: $p360botaosecundarioFocus !important;
+    color: $p360bluedefault !important;
+  }
+
+  &:disabled {
+    background: #fff;
+    border-color: #707070;
+    color: #707070;
+    cursor: not-allowed;
+  }
+}
+
+// Classe para botão de dialog flutuar a direita
+.botaoDialogDireita{
+  float: right;
+  margin-left: 10px;
+}
+
+.botaoDialogEsquerda{
+  float: right;
+}
+
+.dialog-button-float-right {
+  float: right;
+  margin-right: 10px;
+}
+
+.dialog-btn-right {
+  margin-right: 15px;
+}
+
+.btn-universal-access {
+  padding: 12px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 99999;
+}
+
+.btn-font-size {
+  background: transparent;
+  border-radius: $border-radius-xs;
+  width: 28px;
+  height: 28px;
+  border: $border-width-hairline $color-neutral-dark solid;
+  color: $color-neutral-dark;
+  font-weight: $font-weight-light;
+  font-size: 16px;
+  margin-right: 5px;
+  padding: 2px;
+
+  // @media (min-width: 927px) and (max-width: 949px) {
+  //   width: 25px;
+  //   height: 25px;
+  //   font-size: 13px;
+  // }
+
+  // @media (min-width: 891px) and (max-width: 926px) {
+  //   width: 20px;
+  //   height: 20px;
+  //   font-size: 11px;
+  // }
+
+  // @media (min-width: 640px) and (max-width: 675px) {
+  //   width: 22px;
+  //   height: 22px;
+  //   font-size: 11.5px;
+  // }
+
+  &:disabled {
+    background: $color-neutral-medium;
+    border-color: $color-neutral-medium;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+.box-font-size {
+  // z-index: 100;
+  display: none;
+  margin-left: 50px;
+  margin-top: 5px;
+
+  // @media (min-width: 770px) and (max-width: 890px) {
+  //   display: none;
+  // }
+
+  // @media (min-width: 640px) and (max-width: 769px) {
+  //   display: block;
+  //   position: absolute;
+  //   right: 100px;
+  // }
+
+  // @media (max-width: 639px) {
+  //   position: absolute;
+  //   right: 137px;
+  // }
+
+  // @media (max-width: 350px) {
+  //   display: none;
+  // }
+}

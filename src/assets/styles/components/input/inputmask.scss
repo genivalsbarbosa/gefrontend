@@ -1,0 +1,35 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+p-inputmask.form-control input {
+  color: $contentTextColor;
+}
+
+p-inputmask.form-control {
+  padding: 0 !important;
+  font-family: $font-family;
+  font-size: $font-size-xs;
+  font-weight: $font-weight-regular;
+  border-radius: $border-radius-xs;
+
+
+  .ui-inputtext.ui-state-focus, .ui-inputtext:focus {
+    // background-color: white;
+    border: $border-width-hairline $color-neutral-darkest solid !important;
+    box-shadow: $shadow-level-0 rgba($color-brand-primary-dark, $opacity-level-low)!important;
+    // outline: 0;
+    height: 34px;
+  }
+
+  &:disabled {
+    background-color: $color-neutral-light !important;
+    opacity: $opacity-level-low  !important;
+    border-color: $color-neutral-medium !important;
+  }
+
+  input {
+    // padding: 0.89rem !important;
+    padding: 0.75rem !important;
+  }
+}

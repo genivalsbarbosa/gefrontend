@@ -1,0 +1,107 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+.ui-datepicker.ui-widget {
+  background-color: #fff;
+  padding: 0;
+
+  .ui-datepicker-header {
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+    border-top: 0 none;
+    border-left: 0 none;
+    border-right: 0 none;
+    background: $color-neutral-lightest;
+
+    a {
+      &:hover {
+        border-width: 1px;
+      }
+    }
+  }
+
+  .ui-datepicker-title {
+    select {
+      border: 0 none;
+      border-bottom: 1px solid #e4e4e4;
+      color: #7f7f85;
+      font-size: 1.3rem;
+      padding: 0;
+      margin: 0;
+
+      &:hover,
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .ui-inputtext .ui-widget .ui-state-default {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .ui-datepicker-calendar {
+    margin: 0;
+
+    thead th {
+      background-color: #f6f8fa;
+      padding: 8px;
+    }
+
+    td {
+      border-bottom: 1px solid rgba(213, 213, 213, 0.5);
+      padding: 0;
+
+      a {
+        border: 0 none;
+        text-align: center;
+        padding: 8px;
+        color: $piramideMenupaineldefaultColor;
+
+        &.ui-state-highlight {
+          background-color: $piramidetabelazebradoColor;
+          color: $p360blue;
+        }
+
+        &.ui-state-active {
+          background-color: $p360selectioncolor;
+          color: black;
+        }
+      }
+    }
+
+    tr:last-child td {
+      border-bottom: 0 none;
+    }
+  }
+
+  .ui-timepicker {
+    border-bottom: 0 none;
+    border-left: 0 none;
+    border-right: 0 none;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+  }
+
+  &.ui-datepicker-timeonly {
+    .ui-timepicker {
+      border-top: 0 none;
+    }
+  }
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-highlight {
+  background-color: #f0f0f5;
+  color: #0056a4;
+  font-weight: bold;
+}
+
+.ui-datepicker.ui-widget .ui-datepicker-calendar td a.ui-state-active {
+  background-color: #c8dcf0;
+  color: #000;
+  font-weight: bold;
+}

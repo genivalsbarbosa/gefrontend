@@ -1,0 +1,207 @@
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+#topo {
+  .navbar-brand {
+    display: block;
+
+    @media screen and (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  .navbar-brand_ {
+    display: none;
+
+    @media screen and (max-width: 991px) {
+      display: block;
+    }
+  }
+
+  .box-universal-access {
+    z-index:100;
+
+    @media screen and (max-width: 770px) and (min-width: 639px) {
+      position: absolute;
+      right: 70px;
+    }
+
+    @media screen and (max-width: 639px) {
+      position: absolute;
+      right: 100px;
+    }
+
+  }
+
+  .box-pesquisar {
+    display: block;
+    position: relative;
+    z-index: 100;
+
+    // @media screen and (max-width: 991px) {
+    //   display: none;
+    // }
+    @media screen and (max-width: 639px) {
+      display: none;
+    }
+
+    .icon-buscar {
+      width: 20px;
+      display: block;
+      position: absolute;
+      z-index: 90;
+      top: 1rem;
+      right: 0.5rem;
+
+      i {
+        color: #fff;
+        font-size: 1.5rem;
+        display: block;
+      }
+    }
+
+    .ui-autocomplete-input.ui-autocomplete-input {
+      border-radius: 0px;
+      width: 225px;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #fff;
+    }
+
+    $colorPlaceholder: #b7bfc7;
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: $colorPlaceholder;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $colorPlaceholder;
+    }
+
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: $colorPlaceholder;
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: $colorPlaceholder;
+    }
+  }
+
+  .box-pesquisar-mobile {
+    display: block;
+    position: relative;
+
+    @media screen and (min-width: 576px) and (max-width: 639px) {
+      left: -250px;
+    }
+
+    .icon-buscar {
+      width: 20px;
+      display: block;
+      position: absolute;
+      z-index: 90;
+      top: 1rem;
+      right: 0.5rem;
+
+      i {
+        color: #fff;
+        font-size: 1.5rem;
+        display: block;
+      }
+    }
+
+    .ui-autocomplete-input.ui-autocomplete-input {
+      border-radius: 0px;
+      width: 225px;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.5);
+      color: #fff;
+
+      @media screen and (max-width: 359px) and (min-width: 320px) {
+        width: 230px;
+      }
+
+      @media screen and (max-width: 374px) and (min-width: 360px) {
+        width: 255px;
+      }
+
+      @media screen and (max-width: 413px) and (min-width: 375px) {
+        width: 275px;
+      }
+
+      @media screen and (max-width: 434px) and (min-width: 414px) {
+        width: 310px;
+      }
+
+      @media screen and (max-width: 460px) and (min-width: 435px) {
+        width: 330px;
+      }
+
+      @media screen and (max-width: 484px) and (min-width: 461px) {
+        width: 370px;
+      }
+
+      @media screen and (max-width: 510px) and (min-width: 485px) {
+        width: 395px;
+      }
+
+      @media screen and (max-width: 550px) and (min-width: 511px) {
+        width: 420px;
+      }
+
+      @media screen and (max-width: 575px) and (min-width: 551px) {
+        width: 460px;
+      }
+    }
+
+    $colorPlaceholder: #b7bfc7;
+
+    ::-webkit-input-placeholder {
+      /* Chrome/Opera/Safari */
+      color: $colorPlaceholder;
+    }
+
+    ::-moz-placeholder {
+      /* Firefox 19+ */
+      color: $colorPlaceholder;
+    }
+
+    :-ms-input-placeholder {
+      /* IE 10+ */
+      color: $colorPlaceholder;
+    }
+
+    :-moz-placeholder {
+      /* Firefox 18- */
+      color: $colorPlaceholder;
+    }
+  }
+
+  .menu-icon-nav {
+    @media screen and (max-width: 575px) {
+      float: left;
+      width: 35px;
+      padding: 0;
+    }
+  }
+
+  .navbar-configuracoes {
+    @media screen and (max-width: 575px) {
+      float: none;
+      position: absolute;
+      right: 12px;
+      padding: 0 0 0 70px;
+      width: 30%;
+    }
+  }
+  // .navbar-configuracoes {
+  //   @media screen and (min-width: 200px) and (max-width:574px) {
+  //     top: -32px;
+  //   }
+  // }
+}

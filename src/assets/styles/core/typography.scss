@@ -1,0 +1,31 @@
+/* ==========================================================================
+  roboto-regular - latin
+============================================================================ */
+
+@import "assets/templates/tokens/tokens";
+
+@import "assets/templates/styles/abstracts/abstract";
+
+@font-face {
+    font-family: $fontFamily;
+    font-style: normal;
+    font-weight: 400;
+
+    src: url("assets/theme/P360/fonts/roboto-v15-latin-regular.eot");
+
+    /* IE9 Compat Modes */
+    src: local("Roboto"), local("Roboto-Regular"),
+      url("assets/theme/P360/fonts/roboto-v15-latin-regular.eot?#iefix") format("embedded-opentype"),
+      /* IE6-IE8 */ url("assets/theme/P360/fonts/roboto-v15-latin-regular.woff2") format("woff2"),
+      /* Super Modern Browsers */ url("assets/theme/P360/fonts/roboto-v15-latin-regular.woff") format("woff"),
+      /* Modern Browsers */ url("assets/theme/P360/fonts/roboto-v15-latin-regular.ttf") format("truetype"),
+      /* Safari, Android, iOS */ url("assets/theme/P360/fonts/roboto-v15-latin-regular.svg#Roboto") format("svg");
+    /* Legacy iOS */
+  }
+
+  .ui-widget-header {
+    color: $piramideMenupaineldefaultColor;
+    background: white 0 0 repeat-x;
+    background: white;
+    border: 0px solid #f3f3f3;
+  }
